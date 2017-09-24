@@ -16,5 +16,35 @@ namespace Paid2Play
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // this is the button for the sign-up part of the form 
+            // we want this button to log the email and password and pass it to our database and save it there so they can log in later 
+            // we also want for this to bring us to the homepage
+            this.Hide();
+            Home x = new Home();
+            x.Show();
+
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // this is the button for the sign in part of the form 
+            // we want this to check the dredentials against our database and if they pass to bring up the homepage
+            //if they dont pass pop up a message box
+
+
+            this.Hide();
+            Home x = new Home();
+            x.Show();
+        }
     }
 }
