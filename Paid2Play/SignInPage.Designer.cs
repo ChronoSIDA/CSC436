@@ -144,7 +144,7 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form1
+            // SignInPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,8 +161,9 @@
             this.Controls.Add(this.InEmailtBOX);
             this.Controls.Add(this.signUp);
             this.Controls.Add(this.signIn);
-            this.Name = "Form1";
+            this.Name = "SignInPage";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.SignInPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -53,6 +53,7 @@
       <DependentUpon>apps.cs</DependentUpon>
     </Compile>
     <Compile Include="menu.cs" />
+    <Compile Include="mysql.cs" />
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
     </Compile>

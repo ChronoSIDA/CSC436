@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,6 +27,8 @@ namespace Paid2Play
             // this is the button for the sign-up part of the form 
             // we want this button to log the email and password and pass it to our database and save it there so they can log in later 
             // we also want for this to bring us to the homepage
+            mysql z = new mysql();
+            z.connect();
             this.Hide();
             Home x = new Home();
             x.Show();
@@ -40,11 +42,17 @@ namespace Paid2Play
             // this is the button for the sign in part of the form 
             // we want this to check the dredentials against our database and if they pass to bring up the homepage
             //if they dont pass pop up a message box
-
+            mysql z = new mysql();
+            z.connect();
 
             this.Hide();
             Home x = new Home();
             x.Show();
+        }
+
+        private void SignInPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
