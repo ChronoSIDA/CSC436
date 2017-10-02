@@ -1,6 +1,6 @@
 ﻿namespace Paid2Play
 {
-    partial class Home
+    partial class apps
     {
         /// <summary>
         /// Required designer variable.
@@ -45,16 +45,16 @@
             this.signOutToolStripMenuItem});
             this.navMenu.Location = new System.Drawing.Point(0, 0);
             this.navMenu.Name = "navMenu";
-            this.navMenu.Size = new System.Drawing.Size(505, 24);
-            this.navMenu.TabIndex = 0;
+            this.navMenu.Size = new System.Drawing.Size(284, 24);
+            this.navMenu.TabIndex = 1;
             this.navMenu.Text = "navMenu";
-            this.navMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.navMenu_ItemClicked);
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // profileToolStripMenuItem
             // 
@@ -68,7 +68,6 @@
             this.appsToolStripMenuItem.Name = "appsToolStripMenuItem";
             this.appsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.appsToolStripMenuItem.Text = "Apps";
-            this.appsToolStripMenuItem.Click += new System.EventHandler(this.appsToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
@@ -77,17 +76,14 @@
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
-            // Home
+            // apps
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(505, 309);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.navMenu);
-            this.MainMenuStrip = this.navMenu;
-            this.Name = "Home";
-            this.Text = "Home";
-            this.Load += new System.EventHandler(this.Home_Load);
+            this.Name = "apps";
+            this.Text = "apps";
             this.navMenu.ResumeLayout(false);
             this.navMenu.PerformLayout();
             this.ResumeLayout(false);

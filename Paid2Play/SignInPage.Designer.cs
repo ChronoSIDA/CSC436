@@ -1,6 +1,6 @@
 ﻿namespace Paid2Play
 {
-    partial class Form1
+    partial class SignInPage
     {
         /// <summary>
         /// Required designer variable.

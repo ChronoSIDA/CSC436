@@ -1,6 +1,6 @@
 ﻿namespace Paid2Play
 {
-    partial class Home
+    partial class profile
     {
         /// <summary>
         /// Required designer variable.
@@ -45,23 +45,22 @@
             this.signOutToolStripMenuItem});
             this.navMenu.Location = new System.Drawing.Point(0, 0);
             this.navMenu.Name = "navMenu";
-            this.navMenu.Size = new System.Drawing.Size(505, 24);
-            this.navMenu.TabIndex = 0;
+            this.navMenu.Size = new System.Drawing.Size(284, 24);
+            this.navMenu.TabIndex = 1;
             this.navMenu.Text = "navMenu";
-            this.navMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.navMenu_ItemClicked);
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.profileToolStripMenuItem.Text = "Profile";
-            this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // appsToolStripMenuItem
             // 
@@ -77,17 +76,15 @@
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
-            // Home
+            // profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(505, 309);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.navMenu);
-            this.MainMenuStrip = this.navMenu;
-            this.Name = "Home";
-            this.Text = "Home";
-            this.Load += new System.EventHandler(this.Home_Load);
+            this.Name = "profile";
+            this.Text = "Form1";
             this.navMenu.ResumeLayout(false);
             this.navMenu.PerformLayout();
             this.ResumeLayout(false);

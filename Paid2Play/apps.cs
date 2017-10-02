@@ -10,25 +10,17 @@ using System.Windows.Forms;
 
 namespace Paid2Play
 {
-    public partial class Home : Form
+    public partial class apps : Form
     {
-        public Home()
+        public apps()
         {
             InitializeComponent();
         }
-       
         
-
-        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             menu x = new menu();
-            x.signin();
-        }
-
-        private void appsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            menu x = new menu();
-            x.apps();
+            x.home();
         }
 
         private void profileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,14 +29,10 @@ namespace Paid2Play
             x.profile();
         }
 
-        private void navMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Home_Load(object sender, EventArgs e)
-        {
-
+            menu x = new menu();
+            x.signin();
         }
     }
 }
