@@ -49,8 +49,9 @@ namespace Paid2Play
             {
                 if (reader.GetString(0) == pass)
                 {
-                    return true;
                     MyConnection.Close();
+                    return true;
+                    
                 }
                 else
                 {
