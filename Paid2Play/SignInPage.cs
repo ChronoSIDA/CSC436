@@ -29,9 +29,14 @@ namespace Paid2Play
             // we also want for this to bring us to the homepage
             mysql z = new mysql();
             z.connect();
+            string user = upEMailTBOX.Text;
+            string pass = UppwordTBOX.Text;
+            z.addUser(user, pass);
             this.Hide();
             Home x = new Home();
             x.Show();
+            
+            
 
 
 
@@ -44,10 +49,21 @@ namespace Paid2Play
             //if they dont pass pop up a message box
             mysql z = new mysql();
             z.connect();
+            string user = InEmailtBOX.Text;
+            string pass = INpwordtBOX.Text;
+            bool check = z.verifyUser(user, pass);
+            if(check == true)
+            {
+                this.Hide();
+                Home x = new Home();
+                x.Show();
+            }
+            else
+            {
+                MessageBox.Show("invalid username or password");
+            }
 
-            this.Hide();
-            Home x = new Home();
-            x.Show();
+           
         }
 
         private void SignInPage_Load(object sender, EventArgs e)
