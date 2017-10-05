@@ -9,6 +9,7 @@ namespace Paid2Play
 {
     class mysql
     {
+        //s
         public static OdbcConnection MyConnection = new OdbcConnection("DRIVER={MySQL ODBC 5.3 UNICODE Driver}; Server=p2play.mysql.database.azure.com; Port=3306; Database=p2p; Uid=Ryan@p2play; Pwd=Paid2play;");
         public OdbcCommand cmd = new OdbcCommand("",MyConnection);
         public OdbcDataReader reader;
