@@ -31,10 +31,18 @@ namespace Paid2Play
             z.connect();
             string user = upEMailTBOX.Text;
             string pass = UppwordTBOX.Text;
-            z.addUser(user, pass);
-            this.Hide();
-            Home x = new Home();
-            x.Show();
+            if (user != "")
+            {
+                z.addUser(user, pass);
+                this.Hide();
+                Home x = new Home();
+                x.Show();
+            }
+            else
+            {
+                MessageBox.Show("Cannot leave values as empty");
+                z.CloseConnect();
+            }
             
             
 

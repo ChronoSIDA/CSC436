@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Data.Odbc;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
 
 namespace Paid2Play
 {
     class mysql
     {
-        //s
-        public static OdbcConnection MyConnection = new OdbcConnection("DRIVER={MySQL ODBC 5.3 UNICODE Driver}; Server=p2play.mysql.database.azure.com; Port=3306; Database=p2p; Uid=Ryan@p2play; Pwd=Paid2play;");
-        public OdbcCommand cmd = new OdbcCommand("",MyConnection);
-        public OdbcDataReader reader;
+        
+        public static MySqlConnection MyConnection = new MySqlConnection("Server=p2play.mysql.database.azure.com; Port=3306; Database=p2p; Uid=Ryan@p2play; Pwd=Paid2play;");
+        public MySqlCommand cmd = new MySqlCommand("",MyConnection);
+        public MySqlDataReader reader;
         public void connect()
         {
             MyConnection.Open();
@@ -28,8 +30,6 @@ namespace Paid2Play
                               MyConnection.Database);
             Console.WriteLine("\tDataSource:" +
                               MyConnection.DataSource);
-            Console.WriteLine("\tDriver:" +
-                              MyConnection.Driver);
             Console.WriteLine("\tServerVersion:" +
                               MyConnection.ServerVersion);
         }
@@ -64,6 +64,10 @@ namespace Paid2Play
             }
             return false;
 
+        }
+        public void CloseConnect()
+        {
+            MyConnection.Close();
         }
     }
 }
