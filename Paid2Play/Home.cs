@@ -44,7 +44,14 @@ namespace Paid2Play
 
         private void Home_Load(object sender, EventArgs e)
         {
+            String greet = "Welcome to Paid2PLay a application that rewards you for playing applications. " +
+               "Feel free to download and complete the checklist on any of the games you see in the marketplace";
+            greeting.Text = greet;
+        }
 
+        private void greeting_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
