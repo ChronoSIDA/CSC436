@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Paid2Play
 {
+    
     public partial class SignInPage : Form
+
     {
+        public string userName;
         public SignInPage()
         {
             InitializeComponent();
+        }
+        public string getUser()
+        {
+            return this.userName;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,6 +43,8 @@ namespace Paid2Play
                 z.addUser(user, pass);
                 this.Hide();
                 Home x = new Home();
+                userName = user;
+                Properties.Settings.Default.user = userName;
                 x.Show();
             }
             else
@@ -64,6 +73,8 @@ namespace Paid2Play
             {
                 this.Hide();
                 Home x = new Home();
+                userName = user;
+                Properties.Settings.Default.user = userName;
                 x.Show();
             }
             else
@@ -75,7 +86,7 @@ namespace Paid2Play
         }
 
         private void SignInPage_Load(object sender, EventArgs e)
-        {
+        { 
 
         }
     }

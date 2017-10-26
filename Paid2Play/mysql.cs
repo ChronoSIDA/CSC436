@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 
 namespace Paid2Play
 {
-    class mysql
+    class mysql 
     {
         
         public static MySqlConnection MyConnection = new MySqlConnection("Server=p2play.mysql.database.azure.com; Port=3306; Database=p2p; Uid=Ryan@p2play; Pwd=Paid2play;");
@@ -36,6 +36,9 @@ namespace Paid2Play
         public void addUser(string x, string y)
         {
             string text = "INSERT INTO users VALUES('" + x + "','" + y + "')";
+            cmd.CommandText = (text);
+            cmd.ExecuteNonQuery();
+            text = "INSERT INTO account VALUES('" + x + "')";
             cmd.CommandText = (text);
             cmd.ExecuteNonQuery();
             MyConnection.Close();
@@ -67,6 +70,33 @@ namespace Paid2Play
         }
         public void CloseConnect()
         {
+            MyConnection.Close();
+        }
+        public decimal getCredits(string user)
+        {
+            decimal x;
+            string text = "select credits from account where email = '" + user + "';";
+            cmd.CommandText = text;
+            reader = cmd.ExecuteReader();
+            reader.Read();
+            x = reader.GetDecimal("credits");  
+            MyConnection.Close();
+            return x;
+        }
+        public void setPassword(string user, string pass)
+        {
+            string text = "UPDATE users SET password='"+pass+"'WHERE email = '"+user+"';";
+            cmd.CommandText = (text);
+            cmd.ExecuteNonQuery();
+            MyConnection.Close();
+
+        }
+        public void setCredits(string user, decimal amount)
+        {
+            MyConnection.Open();
+            string text = "UPDATE account SET credits='" + amount + "'WHERE email = '" + user + "';";
+            cmd.CommandText = (text);
+            cmd.ExecuteNonQuery();
             MyConnection.Close();
         }
     }

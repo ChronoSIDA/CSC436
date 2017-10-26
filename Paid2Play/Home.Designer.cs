@@ -92,9 +92,9 @@
             this.greeting.Location = new System.Drawing.Point(12, 247);
             this.greeting.MaximumSize = new System.Drawing.Size(500, 5000);
             this.greeting.Name = "greeting";
-            this.greeting.Size = new System.Drawing.Size(62, 30);
+            this.greeting.Size = new System.Drawing.Size(82, 30);
             this.greeting.TabIndex = 1;
-            this.greeting.Text = "label1";
+            this.greeting.Text = "Greeting";
             this.greeting.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.greeting.Click += new System.EventHandler(this.greeting_Click);
             // 
