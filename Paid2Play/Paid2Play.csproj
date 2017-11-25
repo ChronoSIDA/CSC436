@@ -68,6 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>p2pDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="p2pDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>p2pDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +136,17 @@
     </None>
     <None Include="p2pDataSet1.xss">
       <DependentUpon>p2pDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="p2pDataSet2.xsc">
+      <DependentUpon>p2pDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="p2pDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>p2pDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="p2pDataSet2.xss">
+      <DependentUpon>p2pDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

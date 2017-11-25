@@ -21,5 +21,13 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">server=p2play.mysql.database.azure.com;user id=Ryan@p2play;password=Paid2play;persistsecurityinfo=True;database=p2p</Value>
     </Setting>
+    <Setting Name="p2pConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=p2play.mysql.database.azure.com;user id=Ryan@p2play;password=Paid2play;database=p2p&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=p2play.mysql.database.azure.com;user id=Ryan@p2play;password=Paid2play;database=p2p</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

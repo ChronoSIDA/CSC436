@@ -101,19 +101,24 @@ namespace Paid2Play
         }
         public void addActivity(String name, String date)
         {
-            string text = "INSERT INTO activity VALUES('" + name + "','" + date + "')";
+          
+            string text = "INSERT INTO activity VALUES('" + DBNull.Value +"','"+ name + "','" + date + "')";
             cmd.CommandText = (text);
             cmd.ExecuteNonQuery();
             MyConnection.Close();
         }
         public string getActivity()
         {
-            string text = "select * from activity";
-            cmd.CommandText = text;
-            reader = cmd.ExecuteReader();
-            reader.Read();
             string data = "";
-            data += (reader.GetString("name") + "             " + reader.GetString("date"));
+            for (int i = 0; i <= 5; i++)
+            {
+                string text = "select * from activity WHERE id=(SELECT max(id) -" + i + " FROM activity)";
+                cmd.CommandText = text;
+                reader = cmd.ExecuteReader();
+                reader.Read();
+                data += (reader.GetString("name") + "             " + reader.GetString("date") + "\n");
+                reader.Close();
+            }
             MyConnection.Close();
             return data;
         }

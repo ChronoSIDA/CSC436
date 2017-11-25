@@ -49,7 +49,7 @@ namespace Paid2Play
             decimal amount = System.Convert.ToDecimal(y);
             x.setCredits(user, amount);
             conn.connect();
-            DateTime date = DateTime.Today;
+            DateTime date = DateTime.Now;
             conn.addActivity("Asteroid", date.ToString());
             
    
