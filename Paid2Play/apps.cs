@@ -38,6 +38,7 @@ namespace Paid2Play
 
         private void button1_Click(object sender, EventArgs e)
         {
+            mysql conn = new mysql();
             Process proc = new Process();
             proc.StartInfo.FileName = "C:Users\\ryano\\Desktop\\asteriod\\spaceshooter";
             proc.StartInfo.UseShellExecute = true;
@@ -47,6 +48,12 @@ namespace Paid2Play
             string y = "1";
             decimal amount = System.Convert.ToDecimal(y);
             x.setCredits(user, amount);
+            conn.connect();
+            DateTime date = DateTime.Today;
+            conn.addActivity("Asteroid", date.ToString());
+            
+   
+
 
         }
     }

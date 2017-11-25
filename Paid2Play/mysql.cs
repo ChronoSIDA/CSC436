@@ -99,5 +99,23 @@ namespace Paid2Play
             cmd.ExecuteNonQuery();
             MyConnection.Close();
         }
+        public void addActivity(String name, String date)
+        {
+            string text = "INSERT INTO activity VALUES('" + name + "','" + date + "')";
+            cmd.CommandText = (text);
+            cmd.ExecuteNonQuery();
+            MyConnection.Close();
+        }
+        public string getActivity()
+        {
+            string text = "select * from activity";
+            cmd.CommandText = text;
+            reader = cmd.ExecuteReader();
+            reader.Read();
+            string data = "";
+            data += (reader.GetString("name") + "             " + reader.GetString("date"));
+            MyConnection.Close();
+            return data;
+        }
     }
 }

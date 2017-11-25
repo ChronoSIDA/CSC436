@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="p2pDataSet1" targetNamespace="http://tempuri.org/p2pDataSet1.xsd" xmlns:mstns="http://tempuri.org/p2pDataSet1.xsd" xmlns="http://tempuri.org/p2pDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="p2pConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="p2pConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Paid2Play.Properties.Settings.GlobalReference.Default.p2pConnectionString1" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="accountTableAdapter" GeneratorDataComponentClassName="accountTableAdapter" Name="account" UserDataComponentName="accountTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="p2pConnectionString1 (Settings)" DbObjectName="p2p.account" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `email`, `credits` FROM `account`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="activityTableAdapter" GeneratorDataComponentClassName="activityTableAdapter" Name="activity" UserDataComponentName="activityTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="p2pConnectionString1 (Settings)" DbObjectName="p2p.activity" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `name`, `date` FROM `activity`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="appsTableAdapter" GeneratorDataComponentClassName="appsTableAdapter" Name="apps" UserDataComponentName="appsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="p2pConnectionString1 (Settings)" DbObjectName="p2p.apps" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `idapps`, `app`, `title` FROM `apps`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usersTableAdapter" GeneratorDataComponentClassName="usersTableAdapter" Name="users" UserDataComponentName="usersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="p2pConnectionString1 (Settings)" DbObjectName="p2p.users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Email`, `password` FROM `users`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="p2pDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="p2pDataSet1" msprop:Generator_UserDSName="p2pDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="account" msprop:Generator_TableClassName="accountDataTable" msprop:Generator_TableVarName="tableaccount" msprop:Generator_TablePropName="account" msprop:Generator_RowDeletingName="accountRowDeleting" msprop:Generator_RowChangingName="accountRowChanging" msprop:Generator_RowEvHandlerName="accountRowChangeEventHandler" msprop:Generator_RowDeletedName="accountRowDeleted" msprop:Generator_UserTableName="account" msprop:Generator_RowChangedName="accountRowChanged" msprop:Generator_RowEvArgName="accountRowChangeEvent" msprop:Generator_RowClassName="accountRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="activity" msprop:Generator_TableClassName="activityDataTable" msprop:Generator_TableVarName="tableactivity" msprop:Generator_TablePropName="activity" msprop:Generator_RowDeletingName="activityRowDeleting" msprop:Generator_RowChangingName="activityRowChanging" msprop:Generator_RowEvHandlerName="activityRowChangeEventHandler" msprop:Generator_RowDeletedName="activityRowDeleted" msprop:Generator_UserTableName="activity" msprop:Generator_RowChangedName="activityRowChanged" msprop:Generator_RowEvArgName="activityRowChangeEvent" msprop:Generator_RowClassName="activityRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="apps" msprop:Generator_TableClassName="appsDataTable" msprop:Generator_TableVarName="tableapps" msprop:Generator_TablePropName="apps" msprop:Generator_RowDeletingName="appsRowDeleting" msprop:Generator_RowChangingName="appsRowChanging" msprop:Generator_RowEvHandlerName="appsRowChangeEventHandler" msprop:Generator_RowDeletedName="appsRowDeleted" msprop:Generator_UserTableName="apps" msprop:Generator_RowChangedName="appsRowChanged" msprop:Generator_RowEvArgName="appsRowChangeEvent" msprop:Generator_RowClassName="appsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="users" msprop:Generator_TableClassName="usersDataTable" msprop:Generator_TableVarName="tableusers" msprop:Generator_TablePropName="users" msprop:Generator_RowDeletingName="usersRowDeleting" msprop:Generator_RowChangingName="usersRowChanging" msprop:Generator_RowEvHandlerName="usersRowChangeEventHandler" msprop:Generator_RowDeletedName="usersRowDeleted" msprop:Generator_UserTableName="users" msprop:Generator_RowChangedName="usersRowChanged" msprop:Generator_RowEvArgName="usersRowChangeEvent" msprop:Generator_RowClassName="usersRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

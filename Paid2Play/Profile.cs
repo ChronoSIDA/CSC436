@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Paid2Play
 {
@@ -42,7 +43,10 @@ namespace Paid2Play
             username.Text = x.getName();
             string uname = x.getName(); 
             credits.Text = ("wallet: $ " + x.getCredits(uname).ToString());
-
+            mysql conn = new mysql();
+            conn.connect();
+            String d = conn.getActivity();
+            Data.Text = d;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -67,12 +71,27 @@ namespace Paid2Play
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Account x = new Account();
-            string user = username.Text;
-            string y = addbox.Text;
-            decimal amount = System.Convert.ToDecimal(y);
-            x.setCredits(user, amount);
-            credits.Text = ("wallet: $ " + x.getCredits(user).ToString());
+       
+        }
+
+        private void credits_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

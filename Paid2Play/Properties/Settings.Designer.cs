@@ -45,5 +45,16 @@ namespace Paid2Play.Properties {
                 this["user"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=p2play.mysql.database.azure.com;user id=Ryan@p2play;password=Paid2play;per" +
+            "sistsecurityinfo=True;database=p2p")]
+        public string p2pConnectionString1 {
+            get {
+                return ((string)(this["p2pConnectionString1"]));
+            }
+        }
     }
 }
