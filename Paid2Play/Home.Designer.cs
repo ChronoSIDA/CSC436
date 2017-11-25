@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.navMenu = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.greeting = new System.Windows.Forms.Label();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.navMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // navMenu
@@ -45,7 +49,7 @@
             this.signOutToolStripMenuItem});
             this.navMenu.Location = new System.Drawing.Point(0, 0);
             this.navMenu.Name = "navMenu";
-            this.navMenu.Size = new System.Drawing.Size(505, 24);
+            this.navMenu.Size = new System.Drawing.Size(974, 24);
             this.navMenu.TabIndex = 0;
             this.navMenu.Text = "navMenu";
             this.navMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.navMenu_ItemClicked);
@@ -77,19 +81,52 @@
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
+            // greeting
+            // 
+            this.greeting.AutoSize = true;
+            this.greeting.BackColor = System.Drawing.Color.Transparent;
+            this.greeting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.greeting.Font = new System.Drawing.Font("Segoe Print", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.greeting.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.greeting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.greeting.Location = new System.Drawing.Point(12, 247);
+            this.greeting.MaximumSize = new System.Drawing.Size(500, 5000);
+            this.greeting.Name = "greeting";
+            this.greeting.Size = new System.Drawing.Size(82, 30);
+            this.greeting.TabIndex = 1;
+            this.greeting.Text = "Greeting";
+            this.greeting.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.greeting.Click += new System.EventHandler(this.greeting_Click);
+            // 
+            // logo
+            // 
+            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
+            this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logo.Location = new System.Drawing.Point(524, 27);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(450, 514);
+            this.logo.TabIndex = 2;
+            this.logo.TabStop = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(505, 309);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(974, 508);
+            this.Controls.Add(this.logo);
+            this.Controls.Add(this.greeting);
             this.Controls.Add(this.navMenu);
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Gray;
             this.MainMenuStrip = this.navMenu;
             this.Name = "Home";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.navMenu.ResumeLayout(false);
             this.navMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,5 +139,7 @@
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem appsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
+        private System.Windows.Forms.Label greeting;
+        private System.Windows.Forms.PictureBox logo;
     }
 }

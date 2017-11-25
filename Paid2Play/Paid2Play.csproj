@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="apps.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +57,12 @@
       <DependentUpon>apps.cs</DependentUpon>
     </Compile>
     <Compile Include="menu.cs" />
+    <Compile Include="mysql.cs" />
+    <Compile Include="p2pDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>p2pDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +104,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="p2pDataSet.xsc">
+      <DependentUpon>p2pDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="p2pDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>p2pDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="p2pDataSet.xss">
+      <DependentUpon>p2pDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
