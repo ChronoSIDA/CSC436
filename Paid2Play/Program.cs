@@ -16,7 +16,7 @@ namespace Paid2Play
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignInPage());
+            Application.Run(new SignInMain());
         }
     }
 }

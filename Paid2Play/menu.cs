@@ -35,7 +35,7 @@ namespace Paid2Play
         {
             Form y = Form.ActiveForm;
             y.Hide();
-            SignInPage x = new SignInPage();
+            SignInMain x = new SignInMain();
             x.Show();
         }
     }

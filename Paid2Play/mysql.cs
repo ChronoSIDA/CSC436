@@ -38,9 +38,6 @@ namespace Paid2Play
             string text = "INSERT INTO users VALUES('" + x + "','" + y + "')";
             cmd.CommandText = (text);
             cmd.ExecuteNonQuery();
-            text = "INSERT INTO account VALUES('" + x + "')";
-            cmd.CommandText = (text);
-            cmd.ExecuteNonQuery();
             MyConnection.Close();
         }
 
