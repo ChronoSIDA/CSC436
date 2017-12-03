@@ -9,14 +9,13 @@ using MySql.Data.MySqlClient;
 
 namespace Paid2Play
 {
-    class mysql 
+    class mysql
     {
-        
-        public static MySqlConnection MyConnection = new MySqlConnection("Server=p2play.mysql.database.azure.com; Port=3306; Database=p2p; Uid=Ryan@p2play; Pwd=Paid2play;");
-        public MySqlCommand cmd = new MySqlCommand("",MyConnection);
+
+        public static MySqlConnection MyConnection = new MySqlConnection("Server= csc436.mysql.database.azure.com; Port=3306; Database=p2p; Uid=Evan@csc436; Pwd=password1234!;");
+        public MySqlCommand cmd = new MySqlCommand("", MyConnection);
         public MySqlDataReader reader;
-        public void connect()
-        {
+        public void connect(){
             MyConnection.Open();
             Console.WriteLine("\n !!! success, connected successfully !!!\n");
 
@@ -38,8 +37,18 @@ namespace Paid2Play
             string text = "INSERT INTO users VALUES('" + x + "','" + y + "')";
             cmd.CommandText = (text);
             cmd.ExecuteNonQuery();
+            decimal z = 0;
+            addAccount(x, z);
+        }
+
+        public void addAccount(string x, decimal y)
+        {
+            string text = "INSERT INTO account VALUES('" + x + "','" + y + "')";
+            cmd.CommandText = (text);
+            cmd.ExecuteNonQuery();
             MyConnection.Close();
         }
+
 
         public bool verifyUser(string user, string pass)
         {
@@ -103,6 +112,19 @@ namespace Paid2Play
             cmd.CommandText = (text);
             cmd.ExecuteNonQuery();
             MyConnection.Close();
+        }
+
+        public string getGame(int id)
+        {
+            string text = "select name, creator, description from games where id = '" + id + "';";
+            cmd.CommandText = text;
+            reader = cmd.ExecuteReader();
+            reader.Read();
+            string name = reader["name"].ToString();
+            string creator = reader["creator"].ToString();
+            string description = reader["description"].ToString();
+            string str = (name + "1" + creator + "1" + description + "1");
+            return str;
         }
         public string getActivity()
         {

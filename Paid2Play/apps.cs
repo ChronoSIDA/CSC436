@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Paid2Play.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,7 +41,7 @@ namespace Paid2Play
         {
             mysql conn = new mysql();
             Process proc = new Process();
-            proc.StartInfo.FileName = "C:Users\\ryano\\Desktop\\asteriod\\spaceshooter";
+            proc.StartInfo.FileName = "https://www.dropbox.com/s/s8i5zhevhejxk9o/game.zip?dl=0";
             proc.StartInfo.UseShellExecute = true;
             proc.Start();
             Account x = new Account();
@@ -54,6 +55,32 @@ namespace Paid2Play
             
    
 
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void apps_Load(object sender, EventArgs e)
+        {
+            //images
+            var Asteroids = Resources.asteroid;
+          
+
+            mysql conn = new mysql();
+            conn.connect();
+            string str = conn.getGame(1);
+            string[] broken = new string[] { };
+            broken = str.Split('1');
+            string x = broken[0];
+            dataGridView1.Rows.Add(new object[] { broken[0], broken[1], broken[2], Asteroids });
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
