@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.navMenu = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.greeting = new System.Windows.Forms.Label();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.navMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // navMenu
@@ -98,24 +95,14 @@
             this.greeting.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.greeting.Click += new System.EventHandler(this.greeting_Click);
             // 
-            // logo
-            // 
-            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
-            this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logo.Location = new System.Drawing.Point(524, 27);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(450, 514);
-            this.logo.TabIndex = 2;
-            this.logo.TabStop = false;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = global::Paid2Play.Properties.Resources.Applications1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(974, 508);
-            this.Controls.Add(this.logo);
             this.Controls.Add(this.greeting);
             this.Controls.Add(this.navMenu);
             this.DoubleBuffered = true;
@@ -126,7 +113,6 @@
             this.Load += new System.EventHandler(this.Home_Load);
             this.navMenu.ResumeLayout(false);
             this.navMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,6 +126,5 @@
         private System.Windows.Forms.ToolStripMenuItem appsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.Label greeting;
-        private System.Windows.Forms.PictureBox logo;
     }
 }

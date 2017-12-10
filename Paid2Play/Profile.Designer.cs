@@ -39,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cpwordbox = new System.Windows.Forms.TextBox();
             this.enter = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.p2pDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.p2pDataSet1 = new Paid2Play.p2pDataSet1();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,9 +92,10 @@
             // username
             // 
             this.username.AutoSize = true;
+            this.username.BackColor = System.Drawing.Color.Transparent;
             this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.ForeColor = System.Drawing.Color.Cyan;
-            this.username.Location = new System.Drawing.Point(86, 49);
+            this.username.ForeColor = System.Drawing.Color.Black;
+            this.username.Location = new System.Drawing.Point(208, 61);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(134, 31);
             this.username.TabIndex = 2;
@@ -104,9 +104,10 @@
             // credits
             // 
             this.credits.AutoSize = true;
+            this.credits.BackColor = System.Drawing.Color.Transparent;
             this.credits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.credits.ForeColor = System.Drawing.SystemColors.Info;
-            this.credits.Location = new System.Drawing.Point(783, 49);
+            this.credits.ForeColor = System.Drawing.Color.Black;
+            this.credits.Location = new System.Drawing.Point(828, 72);
             this.credits.Name = "credits";
             this.credits.Size = new System.Drawing.Size(56, 20);
             this.credits.TabIndex = 3;
@@ -116,9 +117,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(52, 130);
+            this.label1.Location = new System.Drawing.Point(71, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 17);
             this.label1.TabIndex = 4;
@@ -144,17 +146,6 @@
             this.enter.Visible = false;
             this.enter.Click += new System.EventHandler(this.enter_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(709, 158);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 25);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Recent Activity:\r\n";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // p2pDataSet1BindingSource
             // 
             this.p2pDataSet1BindingSource.DataSource = this.p2pDataSet1;
@@ -168,7 +159,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(829, 203);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(225, 286);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 11;
@@ -177,7 +169,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(725, 203);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(81, 286);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 12;
@@ -186,7 +179,8 @@
             // Data
             // 
             this.Data.AutoSize = true;
-            this.Data.Location = new System.Drawing.Point(725, 255);
+            this.Data.BackColor = System.Drawing.Color.Transparent;
+            this.Data.Location = new System.Drawing.Point(81, 314);
             this.Data.Name = "Data";
             this.Data.Size = new System.Drawing.Size(30, 13);
             this.Data.TabIndex = 13;
@@ -197,11 +191,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = global::Paid2Play.Properties.Resources.Profile;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(974, 508);
             this.Controls.Add(this.Data);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.enter);
             this.Controls.Add(this.cpwordbox);
             this.Controls.Add(this.label1);
@@ -232,7 +227,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox cpwordbox;
         private System.Windows.Forms.Button enter;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource p2pDataSet1BindingSource;
         private p2pDataSet1 p2pDataSet1;
         private System.Windows.Forms.Label label3;
