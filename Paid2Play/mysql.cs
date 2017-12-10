@@ -124,7 +124,9 @@ namespace Paid2Play
             string creator = reader["creator"].ToString();
             string description = reader["description"].ToString();
             string str = (name + "1" + creator + "1" + description + "1");
+            reader.Close();
             return str;
+            
         }
         public string getActivity()
         {

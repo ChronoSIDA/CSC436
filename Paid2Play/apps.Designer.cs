@@ -33,11 +33,11 @@
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creator = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descritpion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Descritpion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.navMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +82,29 @@
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
+            // Image
+            // 
+            this.Image.HeaderText = "Image";
+            this.Image.Name = "Image";
+            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Image.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Descritpion
+            // 
+            this.Descritpion.HeaderText = "Description";
+            this.Descritpion.Name = "Descritpion";
+            this.Descritpion.Width = 400;
+            // 
+            // Creator
+            // 
+            this.Creator.HeaderText = "Creator";
+            this.Creator.Name = "Creator";
+            // 
+            // Title
+            // 
+            this.Title.HeaderText = "Name";
+            this.Title.Name = "Title";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -90,34 +113,11 @@
             this.Creator,
             this.Descritpion,
             this.Image});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 96);
+            this.dataGridView1.Location = new System.Drawing.Point(98, 116);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(747, 336);
+            this.dataGridView1.Size = new System.Drawing.Size(747, 153);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Title
-            // 
-            this.Title.HeaderText = "Name";
-            this.Title.Name = "Title";
-            // 
-            // Creator
-            // 
-            this.Creator.HeaderText = "Creator";
-            this.Creator.Name = "Creator";
-            // 
-            // Descritpion
-            // 
-            this.Descritpion.HeaderText = "Description";
-            this.Descritpion.Name = "Descritpion";
-            this.Descritpion.Width = 400;
-            // 
-            // Image
-            // 
-            this.Image.HeaderText = "Image";
-            this.Image.Name = "Image";
-            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Image.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // apps
             // 
@@ -145,10 +145,10 @@
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem appsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Creator;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descritpion;
         private System.Windows.Forms.DataGridViewImageColumn Image;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descritpion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Creator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

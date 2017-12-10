@@ -71,11 +71,21 @@ namespace Paid2Play
 
             mysql conn = new mysql();
             conn.connect();
-            string str = conn.getGame(1);
+            string str = "";
+            for (int i = 1; i < 7; i++)
+            {
+                str += conn.getGame(i);
+            }
             string[] broken = new string[] { };
             broken = str.Split('1');
-            string x = broken[0];
             dataGridView1.Rows.Add(new object[] { broken[0], broken[1], broken[2], Asteroids });
+            dataGridView1.Rows.Add(new object[] { broken[3], broken[4], broken[5], Asteroids });
+            dataGridView1.Rows.Add(new object[] { broken[6], broken[7], broken[8], Asteroids });
+            dataGridView1.Rows.Add(new object[] { broken[9], broken[10], broken[11], Asteroids });
+            dataGridView1.Rows.Add(new object[] { broken[12], broken[13], broken[14], Asteroids });
+            dataGridView1.Rows.Add(new object[] { broken[15], broken[16], broken[17], Asteroids });
+           
+
 
         }
 
