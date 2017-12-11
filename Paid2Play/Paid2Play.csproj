@@ -197,6 +197,11 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
+    <None Include="Resources\walkie.png" />
+    <None Include="Resources\trump.jpg" />
+    <None Include="Resources\rogue.jpg" />
+    <None Include="Resources\cardshark.jpg" />
+    <None Include="Resources\assistant.png" />
     <None Include="Resources\Applications1.jpg" />
     <None Include="Resources\Applications.jpg" />
     <None Include="Resources\Profile.jpg" />

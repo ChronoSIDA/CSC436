@@ -39,6 +39,9 @@
             this.Descritpion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.Play = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.searchButton = new System.Windows.Forms.Button();
             this.navMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -126,12 +129,43 @@
             this.Play.HeaderText = "Play";
             this.Play.Name = "Play";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(661, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 22);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Search";
+            // 
+            // searchBox
+            // 
+            this.searchBox.Location = new System.Drawing.Point(736, 82);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(100, 20);
+            this.searchBox.TabIndex = 8;
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(842, 82);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.TabIndex = 9;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
             // apps
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Paid2Play.Properties.Resources.Applications;
+            this.BackgroundImage = global::Paid2Play.Properties.Resources.Applications1;
             this.ClientSize = new System.Drawing.Size(937, 433);
+            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.searchBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.navMenu);
             this.Name = "apps";
@@ -158,5 +192,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Descritpion;
         private System.Windows.Forms.DataGridViewImageColumn Image;
         private System.Windows.Forms.DataGridViewButtonColumn Play;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Button searchButton;
     }
 }

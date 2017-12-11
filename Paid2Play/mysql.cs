@@ -128,6 +128,19 @@ namespace Paid2Play
             return str;
             
         }
+        public string gameSearch(string name) {
+            string text = "select name, creator, description from games where name LIKE '"+"%" + name + "%" + "';";
+            cmd.CommandText = text;
+            reader = cmd.ExecuteReader();
+            reader.Read();
+            string n = reader["name"].ToString();
+            string creator = reader["creator"].ToString();
+            string description = reader["description"].ToString();
+            string str = (n + "1" + creator + "1" + description + "1");
+            reader.Close();
+            return str;
+        }
+
         public string getActivity()
         {
             string data = "";
