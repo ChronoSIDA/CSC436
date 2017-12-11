@@ -133,6 +133,16 @@ namespace Paid2Play.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rogueIcon {
+            get {
+                object obj = ResourceManager.GetObject("rogueIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap trump {
             get {
                 object obj = ResourceManager.GetObject("trump", resourceCulture);
@@ -143,9 +153,29 @@ namespace Paid2Play.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap trump1 {
+            get {
+                object obj = ResourceManager.GetObject("trump1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap walkie {
             get {
                 object obj = ResourceManager.GetObject("walkie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap walkieIcon {
+            get {
+                object obj = ResourceManager.GetObject("walkieIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
