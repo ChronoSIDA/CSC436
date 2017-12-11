@@ -39,19 +39,7 @@ namespace Paid2Play
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mysql conn = new mysql();
-            Process proc = new Process();
-            proc.StartInfo.FileName = "https://www.dropbox.com/s/s8i5zhevhejxk9o/game.zip?dl=0";
-            proc.StartInfo.UseShellExecute = true;
-            proc.Start();
-            Account x = new Account();
-            string user = x.getName();
-            string y = "1";
-            decimal amount = System.Convert.ToDecimal(y);
-            x.setCredits(user, amount);
-            conn.connect();
-            DateTime date = DateTime.Now;
-            conn.addActivity("Asteroid", date.ToString());
+           
             
    
 
@@ -84,14 +72,37 @@ namespace Paid2Play
             dataGridView1.Rows.Add(new object[] { broken[9], broken[10], broken[11], Asteroids });
             dataGridView1.Rows.Add(new object[] { broken[12], broken[13], broken[14], Asteroids });
             dataGridView1.Rows.Add(new object[] { broken[15], broken[16], broken[17], Asteroids });
+            conn.CloseConnect();
            
 
 
         }
 
+        private void gameClick(String name)
+        {
+            mysql conn = new mysql();
+            Process proc = new Process();
+            proc.StartInfo.FileName = "C:\\Users\\ryano\\Desktop\\game\\" + name;
+            proc.StartInfo.UseShellExecute = true;
+            proc.Start();
+            Account x = new Account();
+            string user = x.getName();
+            string y = "1";
+            decimal amount = System.Convert.ToDecimal(y);
+            x.setCredits(user, amount);
+            conn.connect();
+            DateTime date = DateTime.Now;
+            conn.addActivity(name, date.ToString());
+        }
+
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int rowIndex = dataGridView1.CurrentRow.Index;
+            int columnIndex = 0;
+            String game = dataGridView1.Rows[rowIndex].Cells[columnIndex].Value.ToString();
 
+            gameClick(game);
         }
     }
 }
