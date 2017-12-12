@@ -87,7 +87,7 @@ namespace Paid2Play
         {
             mysql conn = new mysql();
             Process proc = new Process();
-            proc.StartInfo.FileName = "C:\\Users\\ryano\\Desktop\\game\\" + name;
+            proc.StartInfo.FileName = "C:\\Users\\Evan\\Desktop\\game\\" + name;
             proc.StartInfo.UseShellExecute = true;
             proc.Start();
             Account x = new Account();

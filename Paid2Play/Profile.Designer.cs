@@ -51,6 +51,7 @@
             // 
             // navMenu
             // 
+            this.navMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.navMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.profileToolStripMenuItem,
@@ -58,34 +59,35 @@
             this.signOutToolStripMenuItem});
             this.navMenu.Location = new System.Drawing.Point(0, 0);
             this.navMenu.Name = "navMenu";
-            this.navMenu.Size = new System.Drawing.Size(974, 24);
+            this.navMenu.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.navMenu.Size = new System.Drawing.Size(1299, 28);
             this.navMenu.TabIndex = 1;
             this.navMenu.Text = "navMenu";
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.profileToolStripMenuItem.Text = "Profile";
             // 
             // appsToolStripMenuItem
             // 
             this.appsToolStripMenuItem.Name = "appsToolStripMenuItem";
-            this.appsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.appsToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.appsToolStripMenuItem.Text = "Apps";
             this.appsToolStripMenuItem.Click += new System.EventHandler(this.appsToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -95,9 +97,10 @@
             this.username.BackColor = System.Drawing.Color.Transparent;
             this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username.ForeColor = System.Drawing.Color.Black;
-            this.username.Location = new System.Drawing.Point(208, 61);
+            this.username.Location = new System.Drawing.Point(277, 75);
+            this.username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(134, 31);
+            this.username.Size = new System.Drawing.Size(168, 39);
             this.username.TabIndex = 2;
             this.username.Text = "username";
             // 
@@ -107,9 +110,10 @@
             this.credits.BackColor = System.Drawing.Color.Transparent;
             this.credits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.credits.ForeColor = System.Drawing.Color.Black;
-            this.credits.Location = new System.Drawing.Point(828, 72);
+            this.credits.Location = new System.Drawing.Point(1104, 89);
+            this.credits.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.credits.Name = "credits";
-            this.credits.Size = new System.Drawing.Size(56, 20);
+            this.credits.Size = new System.Drawing.Size(69, 25);
             this.credits.TabIndex = 3;
             this.credits.Text = "credits";
             this.credits.Click += new System.EventHandler(this.credits_Click);
@@ -120,26 +124,29 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(71, 118);
+            this.label1.Location = new System.Drawing.Point(95, 145);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 17);
+            this.label1.Size = new System.Drawing.Size(236, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "click here to change password";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cpwordbox
             // 
-            this.cpwordbox.Location = new System.Drawing.Point(64, 164);
+            this.cpwordbox.Location = new System.Drawing.Point(85, 202);
+            this.cpwordbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cpwordbox.Name = "cpwordbox";
-            this.cpwordbox.Size = new System.Drawing.Size(100, 20);
+            this.cpwordbox.Size = new System.Drawing.Size(132, 22);
             this.cpwordbox.TabIndex = 8;
             this.cpwordbox.Visible = false;
             // 
             // enter
             // 
-            this.enter.Location = new System.Drawing.Point(64, 203);
+            this.enter.Location = new System.Drawing.Point(85, 250);
+            this.enter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.enter.Name = "enter";
-            this.enter.Size = new System.Drawing.Size(75, 23);
+            this.enter.Size = new System.Drawing.Size(100, 28);
             this.enter.TabIndex = 9;
             this.enter.Text = "enter";
             this.enter.UseVisualStyleBackColor = true;
@@ -160,9 +167,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(225, 286);
+            this.label3.Location = new System.Drawing.Point(300, 352);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.Size = new System.Drawing.Size(38, 17);
             this.label3.TabIndex = 11;
             this.label3.Text = "Date";
             // 
@@ -170,9 +178,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(81, 286);
+            this.label4.Location = new System.Drawing.Point(108, 352);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 12;
             this.label4.Text = "Name";
             // 
@@ -180,20 +189,21 @@
             // 
             this.Data.AutoSize = true;
             this.Data.BackColor = System.Drawing.Color.Transparent;
-            this.Data.Location = new System.Drawing.Point(81, 314);
+            this.Data.Location = new System.Drawing.Point(108, 386);
+            this.Data.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(30, 13);
+            this.Data.Size = new System.Drawing.Size(38, 17);
             this.Data.TabIndex = 13;
             this.Data.Text = "Data";
             // 
             // profile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::Paid2Play.Properties.Resources.Profile;
+            this.BackgroundImage = global::Paid2Play.Properties.Resources.Profile1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(974, 508);
+            this.ClientSize = new System.Drawing.Size(1299, 625);
             this.Controls.Add(this.Data);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -203,6 +213,7 @@
             this.Controls.Add(this.credits);
             this.Controls.Add(this.username);
             this.Controls.Add(this.navMenu);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "profile";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.profile_Load);
